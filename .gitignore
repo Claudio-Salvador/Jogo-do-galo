@@ -1,0 +1,17 @@
+# Node
+node_modules/
+.env
+*.log
+npm-debug.log*
+debug.log*
+
+# VSCode
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Outros
+*.tmp
+*.swp

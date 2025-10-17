@@ -1,20 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
     <title>Jogo da Velha - Salvador TI</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toast.css">
 </head>
+
 <body>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo ao Jogo da Velha!</h2>
+            <input type="text" id="playerName" placeholder="Digite seu nome">
+            <button id="enterButton">Entrar</button>
+        </div>
+    </div>
 
-<h1>Jogo da Velha - Narfive</h1>
-<div id="status">Vez do jogador X</div>
-<div id="game"></div>
-<button onclick="resetGame()">Reiniciar Jogo</button>
-<div id="history"><strong>Histórico das últimas partidas:</strong><ul id="matchHistory"></ul></div>
+    <div id="inviteModal" class="modal">
+        <div class="modal-content">
+            <h2>Convite para Jogar</h2>
+            <p id="inviteMessage"></p>
+            <button id="acceptInvite">Aceitar</button>
+            <button id="rejectInvite">Recusar</button>
+        </div>
+    </div>
 
-<script src="js/index.js"></script>
+    <div id="gameArea" style="display: none;">
+        <h1>Jogo da Velha - <span id="playerNameDisplay"></span></h1>
+        <div id="playersList">
+            <h3>Jogadores Online</h3>
+            <ul id="onlinePlayersList"></ul>
+        </div>
 
+        <div id="gameContainer">
+            <div id="status">Aguardando outro jogador...</div>
+            <div id="game"></div>
+            <div>
+                <button id="abandonButton">Abandonar Jogo</button>
+                <button id="historyButton">Ver Histórico Global</button>
+            </div>
+            <div style="margin-top:10px;">
+                <button id="rematchButton">Pedir Rematch</button>
+            </div>
+        </div>
+
+        <div id="history">
+            <h3>Histórico das últimas partidas</h3>
+            <ul id="matchHistory"></ul>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

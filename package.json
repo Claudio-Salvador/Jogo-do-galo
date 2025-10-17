@@ -1,0 +1,13 @@
+{
+    "name": "jogo-da-velha-multiplayer",
+    "version": "1.0.0",
+    "description": "Jogo da Velha Multiplayer com Socket.IO",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "socket.io": "^4.7.2"
+    }
+}
